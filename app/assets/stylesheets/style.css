@@ -1,11 +1,95 @@
+header {
+  text-align: center;
+  background-color:#56C77C;
+  color:white;
+  padding-bottom:20px;
+}
+
+header li {
+  text-decoration: none;
+}
+
 body {
   background-color: #FFCA6B;
-  color:#F9FFFA;
+  color:#235233;
   font-family: 'Lora', serif;
-  text-align: center;
+  font-style: bold;
 }
 
 h1 {
-  font-family: 'Lobster', cursive;
+  font-family: 'Lobster';
+  /* Add backup font*/
+  font-size: 5em;
   letter-spacing: 2px;
+}
+
+li {
+  list-style: none;
+  font-size:1.4em
+}
+
+#notice {
+  text-align: center;
+  background-color:#3788D4;
+  color:white;
+}
+
+#alert {
+  text-align: center;
+  background-color:#E85453;
+  color:white;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.header1 {
+  padding-top:50px;
+  padding-left:20px;
+  padding-bottom:20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+  padding:2.5%;
+}
+
+ul.nav a:hover {
+  color: #6A9DBD !important;
+}
+
+#butter {
+  border-radius:30px;
+  background-color: #FFEDA3;
+  width:30%;
+  margin:4%;
+  min-height:500px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-right:30px;
+}
+
+.underline {
+  text-decoration: underline;
+  padding-top:7px;
+}
+
+.link {
+  font-family: 'Lobster', cursive;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+.fancy {
+  font-family: 'Lobster';
+  font-size:2em;
+}
+
+.button {
+  margin-top:15px;
 }

@@ -1,3 +1,18 @@
-<h1> Gobster </h1>
+<div class="center">
 
-Here is some text
+<div id="butter">
+<h4 class="header1"> - RECIPE OF THE DAY - </h4>
+
+  <ul>
+      <li class="fancy"> <%= @recipe.name %> </li>
+      <li class="underline"> Ingredients: </li>
+      <% @recipe.split_ingredients.each do |ingredient| %>
+        <li><%= ingredient %></li>
+      <% end %>
+
+      <li class="underline"> Directions </li>
+      <li> <%= @recipe.content %> </li>
+  </ul>
+
+</div>
+</div>
