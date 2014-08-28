@@ -93,3 +93,44 @@ ul.nav a:hover {
 .button {
   margin-top:15px;
 }
+
+#rating {
+  margin-top:50px;
+  margin-left:45px;
+}
+
+.top_circle{
+     height:13px;
+     width:26px;
+     border-radius: 90px 90px 0 0;
+     background:white;
+     margin-left:4.2px;
+}
+
+.bot_circle{
+     height:13px;
+     width:26px;
+     border-radius: 0 0 90px 90px;
+     background:white;
+}
+
+.glyphicon-star {
+  font-size: 1.5em;
+}
+
+.glyphicon-th {
+  font-size: 2em;
+}
+
+#cob1 {
+}
+
+#cob2 {
+
+}
+
+#corn {
+  border-radius:50px;
+  width:40px;
+  height:60px;
+}

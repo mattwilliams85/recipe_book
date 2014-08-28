@@ -3,16 +3,27 @@
 <div id="butter">
 <h4 class="header1"> - RECIPE OF THE DAY - </h4>
 
-  <ul>
-      <li class="fancy"> <%= @recipe.name %> </li>
-      <li class="underline"> Ingredients: </li>
-      <% @recipe.split_ingredients.each do |ingredient| %>
-        <li><%= ingredient %></li>
-      <% end %>
+  <% if @recipe != nil %>
+    <ul>
+        <li class="fancy"> <%= @recipe.name %> </li>
+        <li class="underline"> Ingredients: </li>
+        <% @recipe.split_ingredients.each do |ingredient| %>
+          <li><%= ingredient %></li>
+        <% end %>
 
-      <li class="underline"> Directions </li>
-      <li> <%= @recipe.content %> </li>
-  </ul>
+        <li class="underline"> Directions </li>
+        <li> <%= @recipe.content %> </li>
+    </ul>
+  <% else %>
+    <li> < None > </li>
+  <% end %>
+
+<div id="rating">
+  <% (@recipe.rating.to_i).times do %>
+    <span class="glyphicon glyphicon-star"></span>
+  <% end %>
+</div>
 
 </div>
 </div>
+
