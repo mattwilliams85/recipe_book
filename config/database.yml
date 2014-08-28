@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: cooking_development
+
+test:
+  adapter: postgresql
+  database: cooking_test
