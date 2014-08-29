@@ -1,28 +1,25 @@
 <div class="center">
 
 <div id="butter">
-<h4 class="header1"> - RECIPE OF THE DAY - </h4>
+<h4 class="header1"> - FEATURED RECIPE - </h4>
 
   <% if @recipe != nil %>
     <ul>
-        <li class="fancy"> <%= @recipe.name %> </li>
+        <li class="fancy"> <a href="/recipes/<%= @recipe.id %>/show" id="list-recipes"> <%= @recipe.name %> </a> </li>
         <li class="underline"> Ingredients: </li>
         <% @recipe.split_ingredients.each do |ingredient| %>
           <li><%= ingredient %></li>
         <% end %>
-
-        <li class="underline"> Directions </li>
-        <li> <%= @recipe.content %> </li>
     </ul>
-  <% else %>
-    <li> < None > </li>
-  <% end %>
 
 <div id="rating">
   <% (@recipe.rating.to_i).times do %>
     <span class="glyphicon glyphicon-star"></span>
   <% end %>
 </div>
+  <% else %>
+    <li> < None > </li>
+  <% end %>
 
 </div>
 </div>

@@ -1,0 +1,20 @@
+
+<h3 id="recipe_lib" class="underline">Recipe Library</h3>
+
+<% @tags.each do |tag| %>
+  <% if tag.recipes.first != nil %>
+    <div class="butter-slab">
+      <div class="center">
+        <div class="bottom_border">
+          <li class="josefin"> #<%= tag.name %> </li>
+        </div>
+        <div class="push_down">
+          <% tag.recipes.each do |recipe| %>
+
+            <li> <a href="/recipes/<%= recipe.id %>/show" id="list-recipes"> <%= recipe.name %> </a> </li>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

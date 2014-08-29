@@ -1,0 +1,8 @@
+
+<div class="center">
+<h2 class="fancy underline" id="results"> Results </h2>
+
+<% @recipes.each do |recipe| %>
+  <li> <a href="/recipes/<%= recipe.id %>/show" id="list-recipes"> <%= recipe.name %> </a> </li>
+<% end %>
+</div>

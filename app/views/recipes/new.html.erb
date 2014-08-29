@@ -1,13 +1,5 @@
-<% if @recipe.errors.any? %>
-  <div id="alert">
-    <% @recipe.errors.full_messages.each do |message| %>
-      <li> <%= message %> </li>
-    <% end %>
-  </div>
-<% end %>
-
 <div class="left">
-<h3 id="header2"> New Recipe </h3>
+<h3 class="header2"> New Recipe </h3>
 
   <form action="/recipes" method="post" role="form">
     <div class="col-md-4">
@@ -18,7 +10,8 @@
       <input id="recipe_name" class="form-control" name="recipe[ingredients]" type="text" placeholder="(e.g.) 2x Corn-cobs, 1 Cup Butter, 3 Tsp Salt..." >
       <label for="recipe_content"> Directions: </label>
       <textarea id="recipe_content" class="form-control" name="recipe[content]" type="text" rows="10" placeholder="Type here.."></textarea>
-
+      <label for="tag"> Tags: </label>
+      <input id="tag" class="form-control" name="tag" type="text" placeholder="(e.g.) #breakfast #delicious.." >
     </div>
     <select name="recipe[rating]" class="selectpicker">
       <option value="1">1</option>

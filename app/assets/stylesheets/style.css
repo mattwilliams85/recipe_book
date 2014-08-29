@@ -13,7 +13,6 @@ body {
   background-color: #FFCA6B;
   color:#235233;
   font-family: 'Lora', serif;
-  font-style: bold;
 }
 
 h1 {
@@ -34,10 +33,12 @@ li {
   color:white;
 }
 
-#alert {
+.alert {
   text-align: center;
   background-color:#E85453;
   color:white;
+  font-size:0.8em;
+  padding:0;
 }
 
 .italic {
@@ -50,8 +51,20 @@ li {
   padding-bottom:20px;
 }
 
+#recipe_lib {
+  text-align: center;
+}
+
+.josefin {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2em
+}
+
 .center {
   text-align: center;
+  padding-top:50px;
+  padding-left:20px;
+  padding-right:20px;
 }
 
 .left {
@@ -67,11 +80,20 @@ ul.nav a:hover {
   border-radius:30px;
   background-color: #FFEDA3;
   width:30%;
-  margin:4%;
   min-height:500px;
+  margin-top:50px;
   margin-left:auto;
   margin-right:auto;
   padding-right:30px;
+}
+
+.butter-slab {
+  border-radius:30px;
+  background-color: #FFEDA3;
+  min-height:500px;
+  float:left;
+  width:30%;
+  margin:1.5%;
 }
 
 .underline {
@@ -122,15 +144,61 @@ ul.nav a:hover {
   font-size: 2em;
 }
 
-#cob1 {
-}
-
-#cob2 {
-
+.bottom_border {
+  border-bottom: 1px solid #D4C594;
 }
 
 #corn {
   border-radius:50px;
   width:40px;
   height:60px;
+}
+
+.push_down {
+  margin-top:15px;
+}
+
+#list-recipes {
+  color: #235233;
+}
+
+#list-recipes:hover {
+  color: #3FC769;
+  font-style: bold;
+}
+
+.bettah-buttah {
+  border-radius:30px;
+  background-color: #FFEDA3;
+  width:70%;
+  min-height:500px;
+  margin-top:50px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-right:30px;
+}
+
+.inner-buttah {
+  text-align: center;
+  padding-top:10px;
+}
+
+.bold-me {
+  font-weight: 700;
+  padding-top:15px;
+}
+
+#show-rating {
+  text-align: center;
+}
+
+#edit-delete {
+  text-align:center;
+  padding-top:200px;
+  padding-bottom:10px;
+  padding-left:60px;
+}
+
+#results {
+  font-size:3em
 }

@@ -1,0 +1,29 @@
+<div class="left">
+<h3 class="header2"> Edit Recipe </h3>
+
+<form action="/recipes/<%= @recipe.id %>" method="post" role="form">
+  <input name="_method" type="hidden" value="patch">
+    <div class="col-md-4">
+    <div class="form-group">
+      <label for="recipe_name"> Name: </label>
+      <input id="recipe_name" class="form-control" name="name" type="text" value="<%= @recipe.name %>" >
+      <label for="recipe_ingredients"> Ingredients: </label>
+      <input id="recipe_name" class="form-control" name="ingredients" type="text" value="<%= @recipe.ingredients %>" >
+      <label for="recipe_content"> Directions: </label>
+      <textarea id="recipe_content" class="form-control" name="content" type="text" rows="10"> <%= @recipe.content %> </textarea>
+      <label for="tag"> Tags: </label>
+      <input id="tag" class="form-control" name="tag" type="text" value="<%= @tags %>" >
+    </div>
+    <select name="rating" class="selectpicker">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5" >5</option>
+      <option value="" selected="selected">Select Rating</option>
+    </select>
+  <div class="button">
+    <button type="submit" class="btn btn-success">Edit!</button>
+  </div>
+  </form>
+</div>

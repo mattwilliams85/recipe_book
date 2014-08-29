@@ -1,0 +1,24 @@
+<div class="bettah-buttah">
+  <ul>
+    <li class="fancy inner-buttah"> <%= @recipe.name %> </li>
+    <div id="show-rating">
+  <% (@recipe.rating.to_i).times do %>
+    <span class="glyphicon glyphicon-star"></span>
+  <% end %>
+</div>
+    <li class="underline bold-me"> Ingredients </li>
+    <% @recipe.split_ingredients.each do |ingredient| %>
+      <li><%= ingredient %></li>
+    <% end %>
+
+    <li class="underline bold-me"> Directions </li>
+    <li> <%= @recipe.content %> </li>
+  </ul>
+
+<div id="edit-delete">
+  <a href="/recipes/<%= @recipe.id %>/edit" >Edit</a> | <a href="/recipes/<%= @recipe.id %>" data-method="delete" rel="nofollow">Delete</a>
+</div>
+</div>
+
+
+
