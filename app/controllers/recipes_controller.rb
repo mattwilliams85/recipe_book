@@ -18,7 +18,7 @@ class RecipesController < ApplicationController
       @tags = params[:tag].split('#')
       @tags.shift
       @tags.each do |tag|
-        tag = tag.downcase.chomp
+        tag = tag.downcase.strip
       if Tag.find_by(name: tag) == nil
         @tag = Tag.create(:name => tag)
       else
@@ -47,9 +47,11 @@ class RecipesController < ApplicationController
   def library
     if params[:query]
       @recipes = []
+      @tags = []
       @recipes << Recipe.basic_search(params[:query])
-      @recipes << Tag.basic_search(params[:query])
+      @tags << Tag.basic_search(params[:query])
       @recipes = @recipes.flatten.uniq
+      @tags = @tags.flatten.uniq
       render('recipes/results.html.erb')
     else
       @recipes = Recipe.all
@@ -84,7 +86,7 @@ class RecipesController < ApplicationController
     @tags = params[:tag].split('#')
     @tags.shift
     @tags.each do |tag|
-      tag = tag.downcase.chomp
+      tag = tag.downcase.strip
       if Tag.find_by(name: tag) == nil
         @tag = Tag.create(:name => tag)
       else

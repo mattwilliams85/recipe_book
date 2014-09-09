@@ -79,7 +79,7 @@ ul.nav a:hover {
 #butter {
   border-radius:30px;
   background-color: #FFEDA3;
-  width:30%;
+  width:300px;
   min-height:500px;
   margin-top:50px;
   margin-left:auto;
@@ -92,7 +92,7 @@ ul.nav a:hover {
   background-color: #FFEDA3;
   min-height:500px;
   float:left;
-  width:30%;
+  width:270px;
   margin:1.5%;
 }
 
